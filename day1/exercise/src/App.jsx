@@ -1,20 +1,35 @@
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./style.css";
 
-function App() {
-
+function TodoApp() {
   return (
-    <>
-      {/* TODO: Static Todo Application*/}
-      {/* Check the Reference.png file for the design */}
-
-      {/* Steps To Follow:
-      1.Add “Todo Application” heading.
-      2.Display “Input” element
-      3.Display ordered list of todo’s (Ex: 1. mobile, 2.laptop, 3.desktop)
-      4.Display the delete button besides each todo.
-      5.Apply proper styles to the application.*/}
-    </>
-  )
+    <div className="todo-app">
+      <h1>TODO LIST</h1>
+      <div className="input-container">
+        <input type="text" placeholder="add item . . ." />
+        <button className="add-btn">ADD</button>
+      </div>
+      <ul className="todo-list">
+        <li className="todo-item">
+          <span>Task 1</span>
+          <button className="delete-btn">Delete</button>
+          <button className="edit-btn">Edit</button>
+        </li>
+        <li className="todo-item">
+          <span>Task 2</span>
+          <button className="delete-btn">Delete</button>
+          <button className="edit-btn">Edit</button>
+        </li>
+        <li className="todo-item">
+          <span>Task 3</span>
+          <button className="delete-btn">Delete</button>
+          <button className="edit-btn">Edit</button>
+        </li>
+      </ul>
+    </div>
+  );
 }
 
-export default App
+export default TodoApp;
