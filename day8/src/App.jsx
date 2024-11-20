@@ -4,9 +4,7 @@ function App() {
 
   return (
     <>
-    {/* TODO: 1.Implement the Spotify 2.0 Music application */}
-      {/* TODO: 2.Push the code to github */}
-      {/* TODO: 3.Deploy into Netlify */}
+      <h1>Spotify 2.0 Music Application Day-8</h1>
     </>
   )
 }
