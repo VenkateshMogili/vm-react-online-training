@@ -1,20 +1,26 @@
+import AboutUs from './AboutUs'
 import './App.css'
+import ContactInfo from './ContactInfo'
+import ErrorMessage from './ErrorMessage'
+import Footer from './Footer'
+import Greeting from './Greeting'
+import Products from './Products'
+import SocialMediaLink from './SocialMediaLinks'
 
 function App() {
 
   return (
     <>
-      {/* TODO: 1.Button Component*/}
-      {/* Write your code here... */}
-
-      {/* TODO: 2.Anchor Component*/}
-      {/* Write your code here... */}
-
-      {/* TODO: 3.Highlight Day*/}
-      {/* Write your code here... */}
-
-      {/* TODO: 4.Highlight Year*/}
-      {/* Write your code here... */}
+    <Greeting course="Angular"/>
+    <Greeting course="React"/>
+    <AboutUs company="VM Online Training"/>
+    <AboutUs company="Youtube"/>
+    <AboutUs company="Us"/>
+    <ContactInfo email="admin@gmail.com" phone="1234567890"/>
+    <Footer/>
+    <ErrorMessage/>
+    <SocialMediaLink/>
+    <Products/>
     </>
   )
 }
