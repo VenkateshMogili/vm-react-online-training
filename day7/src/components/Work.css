@@ -1,0 +1,45 @@
+.work-container{
+  height:900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color:navy;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.work-description{
+  width:50%;
+  text-align: center;
+}
+
+.work-language{
+  width:250px;
+  height:200px;
+  border:2px solid lightgray;
+  text-align: center;
+  border-radius: 10px;
+  color:white;
+  margin:10px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: navy;
+}
+
+.work-language:hover{
+  background-color: black;
+  color:yellow;
+  transition: 0.5s;
+}
+
+.work-list{
+  display: flex;
+  width:80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

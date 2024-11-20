@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.active{
+  color:red;
+}
+
+.poster-img{
+  width:500px;
+  border-radius: 10px;
+}

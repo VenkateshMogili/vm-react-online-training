@@ -1,0 +1,31 @@
+.home-container{
+  padding-top:120px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:700px;
+}
+
+.profile-image{
+  width:350px;
+  height:350px;
+}
+
+.description,.profile-container{
+  width:30%;
+}
+
+.about-me{
+  background: linear-gradient(blue,aqua);
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius: 10px;
+  width:100px;
+}
+
+.about-me:hover{
+  background: linear-gradient(aqua,blue);
+  width:150px;
+}

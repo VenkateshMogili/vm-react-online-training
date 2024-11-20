@@ -1,13 +1,24 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import About from './components/About'
+import Skills from './components/Skills'
+import Work from './components/Work'
+import Resume from './components/Resume'
 
 function App() {
 
   return (
-    <>
-    {/* TODO: 1.Implement the Portfolio application */}
-      {/* TODO: 2.Push the code to github */}
-      {/* TODO: 3.Deploy into Netlify */}
-    </>
+    <div className='home'>
+    <Navbar/>
+    <div name="home">
+      <Home/>
+      <About/>
+      <Skills/>
+      <Work/>
+      <Resume/>
+    </div>
+    </div>
   )
 }
 

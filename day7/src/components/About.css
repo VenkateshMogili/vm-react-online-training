@@ -1,0 +1,27 @@
+.about-description{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width:800px;
+  background-color: white;
+  color:navy;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.about-description h2{
+  width:50%;
+}
+
+.about-description p{
+  width:50%;
+}
+
+.about-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:900px;
+  flex-direction: column;
+  padding:20px;
+}
