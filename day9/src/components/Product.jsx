@@ -4,7 +4,7 @@ import { CartContext } from "./Home";
 
 export default function Product({ product,moreInfo,size }) {
   const context = useContext(CartContext);
-  const {handleAddToCart}=context;
+  const {handleAddToCart,handleRemoveFromCart}=context;
   return (
     <div className={`card m-2 col-${size?size:'3'}`}>
       <Link to={`/home/product/${product.id}`}>
@@ -20,7 +20,10 @@ export default function Product({ product,moreInfo,size }) {
         </p>
         {moreInfo && <p>More Info</p>}
       </div>
-      <button className="btn btn-primary" onClick={()=>handleAddToCart(product)}>Add To Cart</button>
+      {product.quantity && <h4>Quantity: {product.quantity}</h4>}
+      {product.quantity && <button className="btn btn-danger m-2" onClick={()=>handleRemoveFromCart(product.id)}>Remove From Cart</button>}
+
+      <button className="btn btn-primary m-2" onClick={()=>handleAddToCart(product)}>Add To Cart</button>
     </div>
   )
 }
