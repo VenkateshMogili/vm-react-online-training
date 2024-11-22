@@ -1,6 +1,14 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { CartContext } from "./Home";
 
 export default function Navbar() {
+  const {cart} = useContext(CartContext);
+
+  const cartTotal = cart.reduce((prev,current)=>{
+    return prev+current.quantity;
+  },0);
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-dark" data-bs-theme="dark">
@@ -22,8 +30,8 @@ export default function Navbar() {
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <Link to="/home/checkout">
-          <i className="fa fa-shopping-cart p-2 m-1"/>
+        <Link to="/home/checkout" className="text-decoration-none me-2">
+          <i className="fa fa-shopping-cart p-2 m-1"/> <sup>({cartTotal})</sup>
         </Link>
         <Link to="/login">
         <button className="btn btn-outline-success" type="submit">Login</button>
