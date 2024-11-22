@@ -1,13 +1,22 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { CartContext } from "./Home";
 
 export default function Navbar() {
   const {cart} = useContext(CartContext);
+  const navigate=useNavigate();
 
   const cartTotal = cart.reduce((prev,current)=>{
     return prev+current.quantity;
   },0);
+
+  const username=localStorage.getItem("username");
+
+  const handleLogout=()=>{
+    localStorage.removeItem("username");
+    localStorage.removeItem("token");
+    navigate("/login",{replace:true});
+  }
 
   return (
     <div>
@@ -33,9 +42,15 @@ export default function Navbar() {
         <Link to="/home/checkout" className="text-decoration-none me-2">
           <i className="fa fa-shopping-cart p-2 m-1"/> <sup>({cartTotal})</sup>
         </Link>
+        {username?
+
+        <button className="btn btn-outline-danger" type="submit" onClick={handleLogout}>
+          <p className="text-white m-2">{username} - Logout</p>
+          </button>
+        :
         <Link to="/login">
         <button className="btn btn-outline-success" type="submit">Login</button>
-        </Link>
+        </Link>}
       </form>
     </div>
   </div>

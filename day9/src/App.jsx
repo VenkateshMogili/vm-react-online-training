@@ -8,7 +8,7 @@ import Checkout from './components/Checkout';
 import NotFound from './components/NotFound';
 
 function App() {
-  const isLoggedIn=true;
+  const isLoggedIn=localStorage.getItem("token") || true;
 
   return (
     <>
