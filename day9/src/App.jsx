@@ -15,7 +15,7 @@ function App() {
       {/* E-Commerce application */}
 
       {/* Done: Homepage with Navbar */}
-      {/* TODO-2: Products */}
+      {/* Done: Products */}
       {/* TODO-3: ProductDetails */}
       {/* TODO-4: AddToCart */}
       {/* TODO-5: Checkout */}
