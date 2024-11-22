@@ -22,6 +22,9 @@ export default function Navbar() {
         </li>
       </ul>
       <form className="d-flex" role="search">
+        <Link to="/home/checkout">
+          <i className="fa fa-shopping-cart p-2 m-1"/>
+        </Link>
         <Link to="/login">
         <button className="btn btn-outline-success" type="submit">Login</button>
         </Link>
